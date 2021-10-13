@@ -1,0 +1,33 @@
+﻿@page
+@model RazorCurrencyConverter.Pages.CurrencyConverterModel
+@{
+}
+
+<div>
+    <header class="text-center">
+        <h1 class="display-4">Currency Converter <br />
+        USD to JPY</h1>
+        <br />
+        <h2>By Isabelle Thorpe</h2>
+    </header>
+</div>
+
+<form method="post" class="mx-auto" style="width:200px">
+    <p class="col-sm-2">
+        <label for="sourceCurrency">USD($)</label>
+        <input type="number" required placeholder="0.00" asp-for="@Model.InputUSD" />
+    </p>
+    <p class="col-sm-2">
+        <label for="destCurrency">JPY(¥)</label>
+        <input type="number" asp-for="@Model.OutputJPY" value="@Model.OutputJPY.ToString("0.00")" readonly />
+    </p>
+    <p class="col-sm-2">
+        <button type="submit" class="btn btn-primary">
+            Convert
+        </button>
+    </p>
+    <p class="col-12">
+        @ViewData["Message"]
+    </p>
+</form>
+ 
