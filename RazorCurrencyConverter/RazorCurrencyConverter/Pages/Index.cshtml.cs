@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -21,23 +18,19 @@ namespace RazorCurrencyConverter.Pages
             _logger = logger;
         }
 
-        public void OnGet()
-        {
-            FullName = "Isabelle Thorpe";
-        }
-
+        // User must enter their name (not left blank)
+        // User feedback when registered successfully 
         public void OnPost()
         {
             if (String.IsNullOrWhiteSpace(FullName))
             {
                 ViewData["Message"] = "Name is missing!";
-                FullName = "Anonymous";
             }
             else
             {
-                ViewData["Message"] = "Name is Registered!";
-                // Register the user
+                ViewData["Message"] = FullName + " registered successfully!";
             }
         }
     }
 }
+
