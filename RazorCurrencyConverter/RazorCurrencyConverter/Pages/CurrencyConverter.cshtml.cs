@@ -13,6 +13,8 @@ namespace RazorCurrencyConverter.Pages
         [BindProperty]
         public double OutputJPY { get; set; }
 
+        // Stops user from entering negative numeric 
+        // User feedback when currency conversion successful 
         public void OnPost()
         {
             if (double.IsNegative(InputUSD))
