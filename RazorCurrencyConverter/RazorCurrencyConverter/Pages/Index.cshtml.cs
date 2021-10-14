@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
+//Razor Page Currency Converter - By Isabelle Thorpe
+
 namespace RazorCurrencyConverter.Pages
 {
     public class IndexModel : PageModel
